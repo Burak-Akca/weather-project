@@ -6,101 +6,128 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="499.0" style="-fx-background-color: #0066cc;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.havadurumuveriyapilari.HelloController">
    <children>
-      <Label layoutX="43.0" layoutY="29.0" text="Konumunuz:">
+      <Label layoutX="36.0" layoutY="28.0" text="Konum :" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="textfield" layoutX="136.0" layoutY="25.0" />
-      <Button fx:id="button" layoutX="323.0" layoutY="25.0" mnemonicParsing="false" onAction="#submit" prefHeight="26.0" prefWidth="88.0" style="-fx-background-radius: 15;" text="Göster" />
-      <Label fx:id="citytext" layoutX="42.0" layoutY="88.0" text="ANTALYA,TR">
+      <TextField fx:id="textfield" layoutX="100.0" layoutY="25.0" opacity="0.6" style="-fx-background-radius: 20; -fx-background-color: #00fff2;" />
+      <Button fx:id="button" layoutX="261.0" layoutY="23.0" mnemonicParsing="false" onAction="#submit" opacity="0.7" prefHeight="26.0" prefWidth="88.0" style="-fx-background-radius: 20; -fx-background-color: #00fff2;" text="Göster">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Label fx:id="citytext" layoutX="36.0" layoutY="84.0" text="ANTALYA,TR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="28.0" />
          </font>
       </Label>
       <ImageView fx:id="image" fitHeight="100.0" fitWidth="100.0" layoutX="36.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="361.0" layoutY="196.0" text="Rüzgar">
+      <Label alignment="BASELINE_RIGHT" contentDisplay="RIGHT" layoutX="334.0" layoutY="195.0" prefHeight="20.0" prefWidth="72.0" text="Rüzgar :" textAlignment="RIGHT" textFill="#00fff2">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="windlabel" layoutX="431.0" layoutY="196.0">
+      <Label fx:id="windlabel" layoutX="413.0" layoutY="196.0" prefHeight="18.0" prefWidth="54.0" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="361.0" layoutY="224.0" text="Nem">
+      <Label alignment="BASELINE_RIGHT" contentDisplay="RIGHT" layoutX="334.0" layoutY="222.0" prefHeight="20.0" prefWidth="72.0" text="Nem :" textFill="#00fff2">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="nemlabel" layoutX="431.0" layoutY="224.0">
+      <Label fx:id="nemlabel" layoutX="413.0" layoutY="223.0" prefHeight="18.0" prefWidth="54.0" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="361.0" layoutY="251.0" text="H.Sıcaklık">
+      <Label alignment="BASELINE_RIGHT" contentDisplay="RIGHT" layoutX="334.0" layoutY="249.0" prefHeight="20.0" prefWidth="72.0" text="H.Sıcaklık :" textFill="#00fff2">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="hissedilenlabel" layoutX="431.0" layoutY="251.0">
+      <Label fx:id="hissedilenlabel" layoutX="413.0" layoutY="250.0" prefHeight="18.0" prefWidth="54.0" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="361.0" layoutY="278.0" text="Bulut">
+      <Label alignment="BASELINE_RIGHT" contentDisplay="RIGHT" layoutX="334.0" layoutY="276.0" prefHeight="20.0" prefWidth="72.0" text="Bulut :" textFill="#00fff2">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="bulutlabel" layoutX="431.0" layoutY="278.0">
+      <Label fx:id="bulutlabel" layoutX="413.0" layoutY="277.0" prefHeight="18.0" prefWidth="54.0" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Pane layoutX="10.0" layoutY="329.0" prefHeight="208.0" prefWidth="479.0" style="-fx-border-color: black;">
+      <Pane layoutX="10.0" layoutY="329.0" prefHeight="208.0" prefWidth="479.0" style="-fx-border-color: white; -fx-border-width: 0.5; -fx-border-radius: 20;">
          <children>
-            <Label layoutX="35.0" layoutY="16.0" text="Yarın" />
-            <Label fx:id="date1label" layoutX="111.0" layoutY="16.0" />
-            <Label fx:id="date2label" layoutX="205.0" layoutY="16.0" />
-            <Label fx:id="date3label" layoutX="303.0" layoutY="16.0" />
-            <Label fx:id="date4label" layoutX="399.0" layoutY="16.0" />
-            <ImageView fx:id="image1" fitHeight="75.0" fitWidth="75.0" layoutX="11.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="image2" fitHeight="75.0" fitWidth="75.0" layoutX="101.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="image3" fitHeight="75.0" fitWidth="75.0" layoutX="195.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="image4" fitHeight="75.0" fitWidth="75.0" layoutX="293.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="image5" fitHeight="75.0" fitWidth="75.0" layoutX="389.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
-            <Line endX="-13.999977111816406" endY="-57.0" layoutX="108.0" layoutY="57.0" startX="-13.999977111816406" startY="151.0" />
-            <Line endX="-36.199981689453125" endY="-80.0" layoutX="221.0" layoutY="80.0" startX="-36.199981689453125" startY="127.0" />
-            <Line endX="-36.199981689453125" endY="-81.0" layoutY="81.0" startX="-36.199981689453125" startY="127.0" />
-            <Line endX="-36.199981689453125" endY="-80.0" layoutX="321.0" layoutY="80.0" startX="-36.199981689453125" startY="127.0" />
-            <Line endX="-36.199981689453125" endY="-81.0" layoutX="418.0" layoutY="81.0" startX="-36.199981689453125" startY="127.0" />
-            <Label fx:id="weather1" alignment="CENTER" layoutY="164.0" maxWidth="94.0" prefHeight="17.0" prefWidth="94.0" textAlignment="CENTER" wrapText="true" />
-            <Label fx:id="weather2" alignment="CENTER" layoutX="97.0" layoutY="164.0" maxWidth="94.0" prefHeight="17.0" prefWidth="88.0" textAlignment="CENTER" wrapText="true" />
-            <Label fx:id="weather3" alignment="CENTER" layoutX="185.0" layoutY="164.0" maxWidth="100.0" prefHeight="17.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
-            <Label fx:id="weather4" alignment="CENTER" layoutX="282.0" layoutY="164.0" maxWidth="100.0" prefHeight="17.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
-            <Label fx:id="weather5" alignment="CENTER" layoutX="386.0" layoutY="164.0" maxWidth="94.0" prefHeight="17.0" prefWidth="88.0" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="32.0" layoutY="16.0" text="Yarın" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="date1label" alignment="CENTER" layoutX="90.0" layoutY="16.0" prefHeight="20.0" prefWidth="100.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label fx:id="date2label" alignment="CENTER" layoutX="184.0" layoutY="17.0" prefHeight="19.0" prefWidth="100.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label fx:id="date3label" alignment="CENTER" layoutX="283.0" layoutY="16.0" prefHeight="19.0" prefWidth="100.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label fx:id="date4label" alignment="CENTER" layoutX="379.0" layoutY="16.0" prefHeight="19.0" prefWidth="100.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <ImageView fx:id="image1" fitHeight="75.0" fitWidth="75.0" layoutX="12.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image2" fitHeight="75.0" fitWidth="75.0" layoutX="102.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image3" fitHeight="75.0" fitWidth="75.0" layoutX="198.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image4" fitHeight="75.0" fitWidth="75.0" layoutX="295.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="image5" fitHeight="75.0" fitWidth="75.0" layoutX="391.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="weather1" alignment="CENTER" layoutX="5.0" layoutY="164.0" maxWidth="-Infinity" prefWidth="90.0" textAlignment="CENTER" textFill="#00fff2" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="weather2" alignment="CENTER" layoutX="96.0" layoutY="164.0" maxWidth="-Infinity" prefWidth="90.0" textAlignment="CENTER" textFill="#00fff2" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="weather3" alignment="CENTER" layoutX="190.0" layoutY="164.0" maxWidth="-Infinity" prefWidth="90.0" textAlignment="CENTER" textFill="#00fff2" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="weather4" alignment="CENTER" layoutX="289.0" layoutY="164.0" maxWidth="-Infinity" prefWidth="90.0" textAlignment="CENTER" textFill="#00fff2" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="weather5" alignment="CENTER" layoutX="385.0" layoutY="164.0" maxWidth="-Infinity" prefWidth="90.0" textAlignment="CENTER" textFill="#00fff2" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
          </children>
       </Pane>
-      <Label fx:id="datelabel" layoutX="42.0" layoutY="121.0" text="24.10.2006" textFill="WHITE">
+      <Label fx:id="datelabel" layoutX="36.0" layoutY="132.0" text="24.10.2006" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="42.0" layoutY="158.0" text="Bugün" textFill="WHITE">
+      <Label layoutX="36.0" layoutY="166.0" text="Bugün" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="templabel" layoutX="168.0" layoutY="230.0" text="27.33 °C" textFill="WHITE">
+      <Label fx:id="templabel" layoutX="165.0" layoutY="222.0" text="27.33 °C" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="22.0" />
+            <Font name="System Bold" size="32.0" />
          </font>
       </Label>
    </children>

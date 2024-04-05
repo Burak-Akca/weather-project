@@ -76,7 +76,7 @@ public class HelloController {
            bulutlabel.setText("%"+Integer.toString(cloud));
            String tarih=ss.getJSONArray("list").getJSONObject(0).getString("dt_txt");
 
-            String son="Tarih: "+cc(tarih);
+            String son=cc(tarih);
             datelabel.setText(son);
 
             String tarih1=ss.getJSONArray("list").getJSONObject(15).getString("dt_txt");
