@@ -10,15 +10,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="499.0" style="-fx-background-color: #0066cc;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.havadurumuveriyapilari.HelloController">
    <children>
-      <Label layoutX="36.0" layoutY="28.0" text="Konum :" textFill="WHITE">
+      <Label layoutX="26.0" layoutY="28.0" text="Konum :" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="textfield" layoutX="100.0" layoutY="25.0" opacity="0.6" style="-fx-background-radius: 20; -fx-background-color: #00fff2;" />
-      <Button fx:id="button" layoutX="261.0" layoutY="23.0" mnemonicParsing="false" onAction="#submit" opacity="0.7" prefHeight="26.0" prefWidth="88.0" style="-fx-background-radius: 20; -fx-background-color: #00fff2;" text="Göster">
+      <TextField fx:id="textfield" layoutX="100.0" layoutY="25.0" opacity="0.6" style="-fx-background-radius: 20; -fx-background-color: #00fff2;">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <Button fx:id="button" layoutX="308.0" layoutY="25.0" mnemonicParsing="false" onAction="#submit" opacity="0.7" prefHeight="26.0" prefWidth="88.0" style="-fx-background-radius: 20; -fx-background-color: #00fff2;" text="Göster">
+         <font>
+            <Font name="System Bold" size="15.0" />
          </font></Button>
       <Label fx:id="citytext" layoutX="36.0" layoutY="84.0" text="ANTALYA,TR" textFill="WHITE">
          <font>

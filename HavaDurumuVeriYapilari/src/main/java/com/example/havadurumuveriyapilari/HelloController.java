@@ -133,6 +133,8 @@ weather1.setText(description1);
             // Bağlantı başarısız ise, hata kodunu yazdır
             System.out.println("HTTP request failed with error code: " + responseCode);
         }
+
+        textfield.clear();
     }
 
     static String cc(String tarih) throws IOException {
