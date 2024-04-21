@@ -28,7 +28,7 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <ImageView fx:id="image" fitHeight="100.0" fitWidth="100.0" layoutX="36.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image" fitHeight="100.0" fitWidth="100.0" layoutX="38.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" />
       <Label alignment="BASELINE_RIGHT" contentDisplay="RIGHT" layoutX="334.0" layoutY="195.0" prefHeight="20.0" prefWidth="72.0" text="Rüzgar :" textAlignment="RIGHT" textFill="#00fff2">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -131,6 +131,11 @@
       <Label fx:id="templabel" layoutX="165.0" layoutY="222.0" text="27.33 °C" textFill="WHITE">
          <font>
             <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="weather0" alignment="CENTER" layoutX="14.0" layoutY="286.0" maxWidth="-Infinity" prefHeight="18.0" prefWidth="150.0" textAlignment="CENTER" textFill="#00fff2" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
    </children>

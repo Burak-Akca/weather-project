@@ -24,7 +24,8 @@ public class HelloController {
     @FXML
     private Button button;
     @FXML
-    private Label weather1,weather2,weather3,weather4,weather5, citytext,templabel,windlabel,nemlabel,hissedilenlabel,bulutlabel,datelabel,date1label,date2label,date3label,date4label;
+    private Label weather0,weather1,weather2,weather3,weather4,weather5, citytext,templabel,windlabel,nemlabel,hissedilenlabel,bulutlabel,datelabel,date1label,date2label,date3label,date4label;
+
 
     @FXML
     protected void submit() throws IOException {
@@ -63,6 +64,9 @@ public class HelloController {
             citytext.setText(city+","+country);
             float temp=ss.getJSONArray("list").getJSONObject(0).getJSONObject("main").getFloat("temp");
             templabel.setText(Float.toString(temp)+"°C");
+
+            String descrtiption0 = ss.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("description");
+            weather0.setText(descrtiption0);
 
             float ruzgar=ss.getJSONArray("list").getJSONObject(0).getJSONObject("wind").getFloat("speed");
             DecimalFormat df = new DecimalFormat("#.0");
