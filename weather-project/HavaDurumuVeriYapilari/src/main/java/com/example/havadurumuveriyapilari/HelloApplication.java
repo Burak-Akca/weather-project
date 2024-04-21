@@ -19,8 +19,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Hava Durumu");
         stage.setScene(scene);
-        stage.show();//burak akca
-
+        stage.show();//burak akcagiccc
     }
 
     public static void main(String[] args) throws IOException {
