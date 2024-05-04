@@ -28,7 +28,7 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <ImageView fx:id="image" fitHeight="100.0" fitWidth="100.0" layoutX="38.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image0" fitHeight="100.0" fitWidth="100.0" layoutX="38.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" />
       <Label alignment="BASELINE_RIGHT" contentDisplay="RIGHT" layoutX="334.0" layoutY="195.0" prefHeight="20.0" prefWidth="72.0" text="Rüzgar :" textAlignment="RIGHT" textFill="#00fff2">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -71,23 +71,19 @@
       </Label>
       <Pane layoutX="10.0" layoutY="329.0" prefHeight="208.0" prefWidth="479.0" style="-fx-border-color: white; -fx-border-width: 0.5; -fx-border-radius: 20;">
          <children>
-            <Label layoutX="32.0" layoutY="16.0" text="Yarın" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font></Label>
-            <Label fx:id="date1label" alignment="CENTER" layoutX="90.0" layoutY="16.0" prefHeight="20.0" prefWidth="100.0" textFill="WHITE">
+            <Label fx:id="date2label" alignment="CENTER" layoutX="90.0" layoutY="16.0" prefHeight="20.0" prefWidth="100.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Label>
-            <Label fx:id="date2label" alignment="CENTER" layoutX="184.0" layoutY="17.0" prefHeight="19.0" prefWidth="100.0" textFill="WHITE">
+            <Label fx:id="date3label" alignment="CENTER" layoutX="184.0" layoutY="17.0" prefHeight="19.0" prefWidth="100.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Label>
-            <Label fx:id="date3label" alignment="CENTER" layoutX="283.0" layoutY="16.0" prefHeight="19.0" prefWidth="100.0" textFill="WHITE">
+            <Label fx:id="date4label" alignment="CENTER" layoutX="283.0" layoutY="16.0" prefHeight="19.0" prefWidth="100.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Label>
-            <Label fx:id="date4label" alignment="CENTER" layoutX="379.0" layoutY="16.0" prefHeight="19.0" prefWidth="100.0" textFill="WHITE">
+            <Label fx:id="date5label" alignment="CENTER" layoutX="379.0" layoutY="16.0" prefHeight="19.0" prefWidth="100.0" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Label>
@@ -116,6 +112,11 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
+            <Label fx:id="date1label" alignment="CENTER" layoutY="16.0" prefHeight="20.0" prefWidth="100.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <Label fx:id="datelabel" layoutX="36.0" layoutY="132.0" text="24.10.2006" textFill="WHITE">
