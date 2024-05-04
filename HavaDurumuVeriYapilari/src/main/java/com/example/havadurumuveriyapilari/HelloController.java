@@ -124,10 +124,9 @@ public class HelloController  {
 
 
 
-//
-//            tarih=jsonText.getJSONArray("list").getJSONObject(0).getString("dt_txt");
-//           String son=cc(tarih);
-//           datelabel.setText(son);
+tarih=jsonText.getJSONArray("list").getJSONObject(0).getString("dt_txt");
+        String son=editDate(tarih);
+         datelabel.setText(son);
 //
 //
 //
