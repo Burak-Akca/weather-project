@@ -2,12 +2,12 @@ package com.example.havadurumuveriyapilari;
 
 import java.util.LinkedList;
 
-public class Node {
+public class NodeLinkedList {
 
-    public Linkedlist data;
-    public Node next;
+    String data;
+    NodeLinkedList next;
 
-    public Node(Linkedlist data) {
+    public NodeLinkedList(String data) {
         this.data = data;
         this.next = null;
     }

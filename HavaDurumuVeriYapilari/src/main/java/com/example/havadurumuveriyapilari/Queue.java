@@ -14,7 +14,7 @@ int sayac=0;
         this.rear = null;
     }
 
-    public void enqueue(LinkedList<String> data){sayac++;
+    public void enqueue(Linkedlist data){sayac++;
 
         Node newNode = new Node(data);
 
@@ -28,7 +28,7 @@ int sayac=0;
         }
     }
 
-    public LinkedList<String> dequeue(){
+    public Linkedlist dequeue(){
         Node deletedValue=null;
         if(front == null){
             System.out.println("Queue is empty");

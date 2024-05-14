@@ -16,6 +16,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
 
@@ -38,6 +39,7 @@ public class HelloController  {
 
         ImageView[] imageViews={image1,image2,image3,image4,image5};
         Label[] weatherLabel={weather1,weather2,weather3,weather4,weather5};
+        ArrayList<Float> sicaklik =new ArrayList<>();
 
         String apiUrl = "https://api.openweathermap.org/data/2.5/forecast?q="+textfield.getText()+"&mode=json&lang=tr&units=metric&&appid=d52106c90c1e7537d6d25d91562d330f";
 
@@ -72,15 +74,19 @@ public class HelloController  {
             String tarih;
             String icon;
             String description;
-
-            LinkedList<String> newLinkedList=new LinkedList<>();
+            float tempValue;
+            Linkedlist newLinkedList=new Linkedlist();
 
             Queue queue=new Queue();
             for (int i=7;i<40;i+=8){
                 tarih=jsonText.getJSONArray("list").getJSONObject(i).getString("dt_txt");
               icon =jsonText.getJSONArray("list").getJSONObject(i).getJSONArray("weather").getJSONObject(0).getString("icon");
               description=jsonText.getJSONArray("list").getJSONObject(i).getJSONArray("weather").getJSONObject(0).getString("description");
-                LinkedList<String> linkedList=new LinkedList<>();
+
+             tempValue=jsonText.getJSONArray("list").getJSONObject(i).getJSONObject("main").getFloat("temp");
+
+             sicaklik.add(tempValue);
+             Linkedlist linkedList=new Linkedlist();
               linkedList.add(tarih);
               linkedList.add(icon);
               linkedList.add(description);
@@ -89,6 +95,7 @@ public class HelloController  {
 
 
             }
+
             for (int k=0;k<queue.sayac;k++){
                 newLinkedList=queue.dequeue();
                 dateLabels[k].setText(editDate(newLinkedList.get(0)));
@@ -107,6 +114,7 @@ public class HelloController  {
             citytext.setText(city+","+country);
             float temp=jsonText.getJSONArray("list").getJSONObject(0).getJSONObject("main").getFloat("temp");
             templabel.setText(Float.toString(temp)+"°C");
+            sicaklik.add(temp);
 
             String descrtiption0 = jsonText.getJSONArray("list").getJSONObject(0).getJSONArray("weather").getJSONObject(0).getString("description");
             weather0.setText(descrtiption0);
@@ -127,65 +135,13 @@ public class HelloController  {
 tarih=jsonText.getJSONArray("list").getJSONObject(0).getString("dt_txt");
         String son=editDate(tarih);
          datelabel.setText(son);
-//
-//
-//
-//            String ico1=jsonText.getJSONArray("list").getJSONObject(7).getJSONArray("weather").getJSONObject(0).getString("icon");
-//            image1.setImage(new Image("https://openweathermap.org/img/wn/"+ico1+".png"));
-//            String description1=jsonText.getJSONArray("list").getJSONObject(7).getJSONArray("weather").getJSONObject(0).getString("description");
-//
-//            weather1.setText(description1);
-//
-//
-//
-//
-//            String tarih1=jsonText.getJSONArray("list").getJSONObject(15).getString("dt_txt");
-//            String son1=cc(tarih1);
-//            date2label.setText(son1);
-//            String ico2=jsonText.getJSONArray("list").getJSONObject(15).getJSONArray("weather").getJSONObject(0).getString("icon");
-//            image2.setImage(new Image("https://openweathermap.org/img/wn/"+ico2+".png"));
-//            String description2=jsonText.getJSONArray("list").getJSONObject(15).getJSONArray("weather").getJSONObject(0).getString("description");
-//            weather2.setText(description2);
-//
-//
-//
-//
-//            String tarih2=jsonText.getJSONArray("list").getJSONObject(23).getString("dt_txt");
-//            String son2=cc(tarih2);
-//            date3label.setText(son2);
-//            String ico3=jsonText.getJSONArray("list").getJSONObject(23).getJSONArray("weather").getJSONObject(0).getString("icon");
-//            image3.setImage(new Image("https://openweathermap.org/img/wn/"+ico3+".png"));
-//            String description3=jsonText.getJSONArray("list").getJSONObject(23).getJSONArray("weather").getJSONObject(0).getString("description");
-//            weather3.setText(description3);
-//
-//
-//
-//
-//            String tarih3=jsonText.getJSONArray("list").getJSONObject(31).getString("dt_txt");
-//            String son3=cc(tarih3);
-//            date4label.setText(son3);
-//            String ico4=jsonText.getJSONArray("list").getJSONObject(31).getJSONArray("weather").getJSONObject(0).getString("icon");
-//            image4.setImage(new Image("https://openweathermap.org/img/wn/"+ico4+".png"));
-//            String description4=jsonText.getJSONArray("list").getJSONObject(31).getJSONArray("weather").getJSONObject(0).getString("description");
-//            weather4.setText(description4);
-//
-//
-//            String tarih4=jsonText.getJSONArray("list").getJSONObject(39).getString("dt_txt");
-//            String son4=cc(tarih4);
-//            date5label.setText(son4);
-//            String ico5=jsonText.getJSONArray("list").getJSONObject(39).getJSONArray("weather").getJSONObject(0).getString("icon");
-//            image5.setImage(new Image("https://openweathermap.org/img/wn/"+ico5+".png"));
-//            String description5=jsonText.getJSONArray("list").getJSONObject(39).getJSONArray("weather").getJSONObject(0).getString("description");
-//            weather5.setText(description5);
-//
 
+         bubbleSort(sicaklik);
 
-
-
-
-
-
-
+            System.out.println("Sıralanmış dizi:");
+            for (float num : sicaklik) {
+                System.out.print(num + " ");
+            }
 
 
 
@@ -212,6 +168,24 @@ tarih=jsonText.getJSONArray("list").getJSONObject(0).getString("dt_txt");
         return newDate2;
 
     }
+
+
+    public static void   bubbleSort(ArrayList<Float> array) {
+        int n = array.size();
+        for (int i = 0; i < n-1; i++) {
+            for (int j = 0; j < n-i-1; j++) {
+                // Eğer bir sonraki eleman şuanki elemandan küçükse yer değiştir
+                if (array.get(j) > array.get(j+1)) {
+                    // Swap işlemi
+                    float temp = array.get(j);
+                    array.set(j, array.get(j+1));
+                    array.set(j+1, temp);
+                }
+            }
+        }
+    }
+
+
 
 
 
